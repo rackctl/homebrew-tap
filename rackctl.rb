@@ -5,21 +5,21 @@
 class Rackctl < Formula
   desc "The day-0 installer for a nanohype platform"
   homepage "https://rackctl.com"
-  version "0.2.1"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.2.1/rackctl_darwin_amd64.tar.gz"
-      sha256 "c9b61ce0cf9878ebd52b9aa6b1a9716bb94cc1b3880b44670ad0a01296cc79fe"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.3.0/rackctl_darwin_amd64.tar.gz"
+      sha256 "e783b5b7adcbbef369c28c0349fc5216c886beb0b90aedd6a83abdf4c9e06613"
 
       define_method(:install) do
         bin.install "rackctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.2.1/rackctl_darwin_arm64.tar.gz"
-      sha256 "8b04d141e199578a09925eaaf9ea3db10252d734de75f954998e3ab4f31ee94c"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.3.0/rackctl_darwin_arm64.tar.gz"
+      sha256 "84e6628b36b416ef9e79833eea261f240b8868ef870631d5abab7e31f2dc876d"
 
       define_method(:install) do
         bin.install "rackctl"
@@ -29,15 +29,15 @@ class Rackctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.2.1/rackctl_linux_amd64.tar.gz"
-      sha256 "652b3dd6a4ce97c2e5e368886cb930c26a96f8c1e313d3cedc415523696ad448"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.3.0/rackctl_linux_amd64.tar.gz"
+      sha256 "bbadb5622c14a8d80bdbb907b216a76b1585fc90ae434dd92ef925fa66d393ca"
       define_method(:install) do
         bin.install "rackctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.2.1/rackctl_linux_arm64.tar.gz"
-      sha256 "74f77c62d17361d87a1c6049587de7b514dfa42a1cd07d9d4e65bd732adfc119"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.3.0/rackctl_linux_arm64.tar.gz"
+      sha256 "954d2b4db392a8ad68acb9bd0b64d283cff2f91c60d74e2f30d6b0691bc5168b"
       define_method(:install) do
         bin.install "rackctl"
       end
