@@ -5,21 +5,21 @@
 class Rackctl < Formula
   desc "The day-0 installer for a nanohype platform"
   homepage "https://rackctl.com"
-  version "0.3.2"
+  version "0.0.0-tokentest"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.3.2/rackctl_darwin_amd64.tar.gz"
-      sha256 "d729618bed40486c753606d1ab59d4cf65da9a8cef85e2884698142a93a8fd8c"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.0.0-tokentest/rackctl_darwin_amd64.tar.gz"
+      sha256 "067878ad97ea022d1db664b316c6d475a1ffe016374f028614136a31e43f9845"
 
       define_method(:install) do
         bin.install "rackctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.3.2/rackctl_darwin_arm64.tar.gz"
-      sha256 "fea0780e0d239ce4ce7fa1e1f5d4546529a62d260e635ce6dc44996cf0dd47e5"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.0.0-tokentest/rackctl_darwin_arm64.tar.gz"
+      sha256 "6288f1fbca232221991bb9c1a0d149a73f2aef2c421e5c75d325c6949e191f99"
 
       define_method(:install) do
         bin.install "rackctl"
@@ -29,15 +29,15 @@ class Rackctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.3.2/rackctl_linux_amd64.tar.gz"
-      sha256 "150bd9ff5fcb2b3363e21528097d80d696d6f7bc46c6a9c99f48f4f2e2ff6697"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.0.0-tokentest/rackctl_linux_amd64.tar.gz"
+      sha256 "c964bf8e3d4a8559ccd184088eab661ab526512e3ea90c7d07c8d40169da3d06"
       define_method(:install) do
         bin.install "rackctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rackctl/rackctl/releases/download/v0.3.2/rackctl_linux_arm64.tar.gz"
-      sha256 "c350d419a8d1ef7e3bf52bf0ddd4fd4fe16752481acad8b60b316db42cbb90c5"
+      url "https://github.com/rackctl/rackctl/releases/download/v0.0.0-tokentest/rackctl_linux_arm64.tar.gz"
+      sha256 "71351451dd91ad603b72542f1be579c081144d205848064658505614cb56becc"
       define_method(:install) do
         bin.install "rackctl"
       end
